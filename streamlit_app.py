@@ -27,7 +27,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 # Print results.
 for row in rows:
-    st.write(f"{row}")
+    st.write(f"{row.留下一句話你最想跟_Anita_說的話吧_}")
 
 
 # # https://blog.streamlit.io/streamlit-firestore-continued/
