@@ -5,6 +5,15 @@ import streamlit as st
 from google.oauth2 import service_account
 from gsheetsdb import connect
 from PIL import Image
+
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+
+gauth = GoogleAuth()           
+drive = GoogleDrive(gauth)  
+
+
+
 # Create a connection object.
 credentials = service_account.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"],
@@ -29,6 +38,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 for row in rows:
 	st.text(row)
 	st.write(f"拜訪時間: {row.時間戳記}\n  我想說: {row.留下一句話你最想跟_Anita_說的話吧_}")
+
 	# st.image("https://drive.google.com/open?id=14456bhRmjPaxYPWmKw4DfjLCQ4MAQZDz") # Manually Adjust the width of the image as per requirement
     # st.write(f"{row._3}")
 	# st.write(f"{row.留下一句話你最想跟_Anita_說的話吧_}")
@@ -37,12 +47,26 @@ def load_image(image_file):
 	img = Image.open(image_file)
 	return img
 
-image_file = st.file_uploader("Upload Files",type=['png','jpeg'])
+image_file = st.file_uploader("Upload Files", type=['png','jpeg'], accept_multiple_files = True)
 if image_file is not None:
-    # file_details = {"FileName":image_file.name,"FileType":image_file.type,"FileSize":image_file.size}
-	st.image(load_image(image_file),width=250)
-    # st.text(file_details)
 	# To View Uploaded Image
+	st.image(load_image(image_file),width=250)
+
+	folder_id = '17ltL5jMFTiQr23tVlacN6Q_4NLMBGrx7NpSOi3xYQxBi2ApBffOE1FbHgAzvHkKwk88oQJDF'
+	gfile = drive.CreateFile({'parents': [{'id': folder_id}]})
+	# Read file and set it as the content of this instance.
+	gfile.SetContentFile(upload_file)
+	gfile.Upload() # Upload the file.
+
+	#Saving upload
+	with open(os.path.join("fileDir",image_file.name),"wb") as f:
+		f.write((image_file).getbuffer())
+			  
+	st.success("File Saved")
+
+	# file_details = {"FileName":image_file.name,"FileType":image_file.type,"FileSize":image_file.size}
+    # st.text(file_details)
+	
 	
 
 
