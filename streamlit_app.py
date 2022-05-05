@@ -39,10 +39,10 @@ def load_image(image_file):
 
 image_file = st.file_uploader("Upload Files",type=['png','jpeg'])
 if image_file is not None:
-    file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
+    file_details = {"FileName":image_file.name,"FileType":image_file.type,"FileSize":image_file.size}
     st.write(file_details)
-	# To View Uploaded Image
-	st.image(load_image(image_file),width=250)
+	# # To View Uploaded Image
+	# st.image(load_image(image_file),width=250)
 
 
 # # https://blog.streamlit.io/streamlit-firestore-continued/
