@@ -2,7 +2,7 @@ import streamlit as st
 from google.cloud import firestore
 
 # Authenticate to Firestore with the JSON account key.
-db = firestore.Client.from_service_account_json("/Users/zoeyeh/Downloads/streamlit-reddit-ebe13-firebase-adminsdk-h9zlm-e17d9202bf.json")
+db = firestore.Client.from_service_account_json("streamlit-reddit-ebe13-firebase-adminsdk-h9zlm-e17d9202bf.json")
 
 # Create a reference to the Google post.
 doc_ref = db.collection("posts").document("Google")
