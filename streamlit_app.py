@@ -29,7 +29,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 for row in rows:
 	st.text(row)
 	st.write(f"拜訪時間: {row.時間戳記}\n  我想說: {row.留下一句話你最想跟_Anita_說的話吧_}")
-	st.image("https://drive.google.com/open?id=14456bhRmjPaxYPWmKw4DfjLCQ4MAQZDz") # Manually Adjust the width of the image as per requirement
+	# st.image("https://drive.google.com/open?id=14456bhRmjPaxYPWmKw4DfjLCQ4MAQZDz") # Manually Adjust the width of the image as per requirement
     # st.write(f"{row._3}")
 	# st.write(f"{row.留下一句話你最想跟_Anita_說的話吧_}")
 
