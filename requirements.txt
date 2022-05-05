@@ -1,4 +1,4 @@
 streamlit
 google-cloud-firestore
-PIL
+Pillow
 gsheetsdb==0.1.13
