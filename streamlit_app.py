@@ -52,7 +52,7 @@ image_file = st.file_uploader("Upload Files", type=['png','jpeg'])
 
 if image_file is not None:
 	# To View Uploaded Image
-	st.image(load_image(image_file),width=250)
+	st.image(load_image(image_file), width=300)
 
 	#Saving upload
 	with open(image_file.name,"wb") as f:
