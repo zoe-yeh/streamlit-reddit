@@ -1,5 +1,5 @@
 streamlit
 google-cloud-firestore
 Pillow
-gsheetsdb==0.1.13
 PyDrive
+gsheetsdb==0.1.13
