@@ -3,7 +3,7 @@
 import streamlit as st
 from google.cloud import firestore
 
-db = firestore.Client.from_service_account_json("firestore-key.json")
+db = firestore.Client.from_service_account_json("streamlit-reddit-ebe13-firebase-adminsdk-h9zlm-e17d9202bf.json")
 
 # Streamlit widgets to let a user create a new post
 title = st.text_input("Post title")
