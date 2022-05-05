@@ -4,7 +4,7 @@
 import streamlit as st
 from google.oauth2 import service_account
 from gsheetsdb import connect
-
+from PIL import Image
 # Create a connection object.
 credentials = service_account.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"],
@@ -33,6 +33,14 @@ for row in rows:
     # st.write(f"{row._3}")
 	# st.write(f"{row.留下一句話你最想跟_Anita_說的話吧_}")
 
+# def load_image(image_file):
+# 	img = Image.open(image_file)
+# 	return img
+
+uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
+if uploaded_file is not None:
+    file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
+     st.write(file_details)
 
 # # https://blog.streamlit.io/streamlit-firestore-continued/
 
