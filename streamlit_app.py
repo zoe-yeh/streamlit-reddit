@@ -55,7 +55,7 @@ if image_file is not None:
 	st.image(load_image(image_file),width=250)
 
 	#Saving upload
-	with open(os.path.join("fileDir",image_file.name),"wb") as f:
+	with open(image_file.name,"wb") as f:
 		f.write((image_file).getbuffer())
 			  
 	st.success("File Saved")
