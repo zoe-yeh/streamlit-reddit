@@ -37,10 +37,10 @@ for row in rows:
 # 	img = Image.open(image_file)
 # 	return img
 
-uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
-if uploaded_file is not None:
-    file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
-    st.write(file_details)
+# uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
+# if uploaded_file is not None:
+#     file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
+#     st.write(file_details)
 
 # # https://blog.streamlit.io/streamlit-firestore-continued/
 
