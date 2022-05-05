@@ -54,17 +54,19 @@ if image_file is not None:
 	# To View Uploaded Image
 	st.image(load_image(image_file),width=250)
 
+	#Saving upload
+	with open(os.path.join("fileDir",image_file.name),"wb") as f:
+		f.write((image_file).getbuffer())
+			  
+	st.success("File Saved")
+
 	folder_id = '17ltL5jMFTiQr23tVlacN6Q_4NLMBGrx7NpSOi3xYQxBi2ApBffOE1FbHgAzvHkKwk88oQJDF'
 	gfile = drive.CreateFile({'parents': [{'id': folder_id}]})
 	# Read file and set it as the content of this instance.
 	gfile.SetContentFile(image_file)
 	gfile.Upload() # Upload the file.
 
-	# #Saving upload
-	# with open(os.path.join("fileDir",image_file.name),"wb") as f:
-	# 	f.write((image_file).getbuffer())
-			  
-	# st.success("File Saved")
+	
 
 	# file_details = {"FileName":image_file.name,"FileType":image_file.type,"FileSize":image_file.size}
     # st.text(file_details)
