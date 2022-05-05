@@ -47,7 +47,9 @@ def load_image(image_file):
 	img = Image.open(image_file)
 	return img
 
-image_file = st.file_uploader("Upload Files", type=['png','jpeg'], accept_multiple_files = True)
+# image_file = st.file_uploader("Upload Files", type=['png','jpeg'], accept_multiple_files = True)
+image_file = st.file_uploader("Upload Files", type=['png','jpeg'])
+
 if image_file is not None:
 	# To View Uploaded Image
 	st.image(load_image(image_file),width=250)
