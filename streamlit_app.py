@@ -27,7 +27,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 # Print results.
 for row in rows:
-    st.write(f"{row.name} has a :{row.pet}:")
+    st.write(f"{row}")
 
 
 # # https://blog.streamlit.io/streamlit-firestore-continued/
