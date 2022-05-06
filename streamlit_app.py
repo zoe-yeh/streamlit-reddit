@@ -17,14 +17,6 @@ import helper as help
 
 
 
-# 加入進度條, 增加一個空白元件，等等要放文字
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-	latest_iteration.text(f"目前進度: {i+1} %")
-	bar.progress(i + 1)
-	time.sleep(0.1)
-
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
 
@@ -38,6 +30,14 @@ st.set_page_config(
 	layout="wide",  
 	initial_sidebar_state="collapsed")
 
+
+# 加入進度條, 增加一個空白元件，等等要放文字
+latest_iteration = st.empty()
+bar = st.progress(0)
+for i in range(100):
+	latest_iteration.text(f"目前進度: {i+1} %")
+	bar.progress(i + 1)
+	time.sleep(0.1)
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
