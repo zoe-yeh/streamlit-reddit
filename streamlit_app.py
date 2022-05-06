@@ -29,6 +29,17 @@ st.set_page_config(
 st.image("./img/anita_test.jpeg", width=300)
 
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 st.title('輸入你想對梅姐說的話：')
