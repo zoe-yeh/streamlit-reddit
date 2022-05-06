@@ -19,6 +19,16 @@ from pydrive.drive import GoogleDrive
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # 網頁配置設定
 st.set_page_config(
 	page_title="Anita Mui 出道 40 週年應援活動", 
@@ -29,15 +39,7 @@ st.set_page_config(
 st.image("./img/anita_test.jpeg", width=300)
 
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 # Perform SQL query on the Google Sheet.
