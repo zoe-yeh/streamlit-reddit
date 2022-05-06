@@ -98,7 +98,7 @@ if image_file is not None:
 	st.image(load_image(image_file), width=300)
 
 
-st.video(https://www.youtube.com/watch?v=EoTMlRISRuQ, start_time=0)
+st.video("https://www.youtube.com/watch?v=EoTMlRISRuQ", start_time=0)
 # https://github.com/soft-nougat/streamlitwebcam/tree/main/final_model
 # https://discuss.streamlit.io/t/how-do-i-use-a-background-image-on-streamlit/5067/9
 # https://vocus.cc/article/60ea6520fd89780001771fcd
