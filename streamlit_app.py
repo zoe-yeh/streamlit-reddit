@@ -70,7 +70,7 @@ def load_image(image_file):
 	return img
 
 # image_file = st.file_uploader("Upload Files", type=['png','jpeg'], accept_multiple_files = True)
-image_file = st.file_uploader("Upload Files", type=['png','jpeg'])
+image_file = st.file_uploader("放張你最喜歡的 Anita 或是為今天留下一個紀念吧！", type=['png','jpeg'])
 
 if image_file is not None:
 	# To View Uploaded Image
