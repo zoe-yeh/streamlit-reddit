@@ -38,8 +38,8 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 st.set_page_config(
     page_title="Anita Mui 出道 40 週年應援活動",
     page_icon="random",
-    layout="wide", # 網頁中佈局寬度，預設是"centered"，還可以使用"wide"
-    initial_sidebar_state="collapsed", # 側邊欄顯示狀態，"expanded"打開或"collapsed"隱藏，預設是"auto"，代表在手機尺寸的設備上是隱藏，否則是打開顯示。
+    layout="wide", 
+    initial_sidebar_state="collapsed", 
 )
 
 
