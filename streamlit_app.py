@@ -50,7 +50,7 @@ if place and years and submit:
 	doc_ref = db.collection("anita").document("anita40anniversary")
 	doc_ref.set({
 		"place": place,
-		"years": years
+		"year": years
 	})
 
 # And then render each post, using some light Markdown
