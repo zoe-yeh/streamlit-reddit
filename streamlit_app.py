@@ -19,7 +19,7 @@ from pydrive.drive import GoogleDrive
 # 	latest_iteration.text(f"目前進度: {i+1} %")
 # 	bar.progress(i + 1)
 # 	time.sleep(0.1)
-
+![](anita_test.jpeg)
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
 # 網頁配置設定
