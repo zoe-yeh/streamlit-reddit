@@ -63,7 +63,7 @@ set_background('20211230mui_0.png')
 
 # Streamlit widgets to let a user create a new post
 nickname = st.text_input("暱稱:")
-st.markdown("<img src='anita40anniversary_DM1.jpg'>", unsafe_allow_html=True)
+st.markdown("<img src='../img/anita40anniversary_DM1.jpg'>", unsafe_allow_html=True)
 
 
 place = st.text_input("你是來自哪裡的粉絲:")
