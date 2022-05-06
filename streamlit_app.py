@@ -62,7 +62,7 @@ set_background('20211230mui_0.png')
 
 
 # Streamlit widgets to let a user create a new post
-nickname = st.text_input(1"暱稱:")
+nickname = st.text_input("1.暱稱:")
 place = st.text_input("2. 你是來自哪裡的粉絲:")
 years = st.text_input("3. 喜歡 Anita 已經有幾年了")
 sentence = st.text_input("4. 你想對 Anita 說")
