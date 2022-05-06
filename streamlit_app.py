@@ -13,17 +13,9 @@ import base64
 import helper as help
 # help.set_bg_hack()
 
-
-
-
-
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
-
-
 # 網頁配置設定
-# st.set_page_config(page_title="Anita")
-
 st.set_page_config(
 	page_title="Anita Mui 出道 40 週年應援活動", 
 	page_icon="random", 
@@ -39,6 +31,7 @@ for i in range(100):
 	bar.progress(i + 1)
 	time.sleep(0.1)
 
+# 背景圖
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -58,9 +51,6 @@ def set_background(png_file):
 
 set_background('20211230mui_0.png')
 
-# st.image("./img/anita_test.jpeg", width=300)
-
-
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 st.title('輸入你想對梅姐說的話：')
@@ -68,29 +58,34 @@ st.title('輸入你想對梅姐說的話：')
 
 
 # Streamlit widgets to let a user create a new post
+nickname = st.text_input("暱稱:")
 place = st.text_input("你是來自哪裡的粉絲:")
 years = st.text_input("喜歡 Anita 已經有幾年了")
+sentence = st.text_input("你想對 Anita 說")
+
 submit = st.button("Submit")
 
 # Once the user has submitted, upload it to the database
-if place and years and submit:
+if place and years and nickname and submit:
 	doc_ref = db.collection("anita").document("anita40anniversary")
 	doc_ref.set({
+		"nickname": nickname,
 		"place": place,
-		"year": years
+		"year": years,
+		"sentence": sentence
 	})
 
 # And then render each post, using some light Markdown
 anita_ref = db.collection("anita")
 for doc in anita_ref.stream():
 	fans_profile = doc.to_dict()
+	nickname = fans_profile["nickname"]
 	place = fans_profile["place"]
 	years = fans_profile["year"]
-    
-	# st.subheader(f"Post: {fans_profile}")
+	sentence = fans_profile["sentence"]
 
-	st.subheader(f"Post: {place}")
-	st.subheader(f"喜歡 Anita 已經有幾年了: {years}")
+	st.subheader(f"來自{place} 的 {nickname} 已經喜歡Anita 已經有 {years} 年了，他最想跟 Anita 說: {sentence}")
+	
 
 def load_image(image_file):
 	img = Image.open(image_file)
