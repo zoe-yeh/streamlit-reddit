@@ -31,6 +31,12 @@ for i in range(100):
 	bar.progress(i + 1)
 	time.sleep(0.1)
 
+st.title('輸入你想對梅姐說的話：')
+
+subheader = "未變情懷40載, 流年似水如一夢"
+st.subheader(subheader)
+
+
 # 背景圖
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -53,7 +59,7 @@ set_background('20211230mui_0.png')
 
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
-st.title('輸入你想對梅姐說的話：')
+
 
 
 
