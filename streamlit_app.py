@@ -34,6 +34,25 @@ st.set_page_config(
 
 st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
+# st.write("Instagram: paintinglife_0707(https://www.instagram.com/paintinglife_0707/)")
+st.markdown("""<table>
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Peter Parker</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Clark Kent</td>
+        <td>34</td>
+    </tr>
+</table>""", unsafe_allow_html=True)
+
 
 # 背景圖
 def get_base64(bin_file):
@@ -121,8 +140,6 @@ st.markdown("<h2 style='text-align: center; color: black;'>謝謝今天的拜訪
 # st.markdown("<h2 style='text-align: center; color: black;'>一切消息都會公佈在小海的 Instagram 帳號敬請期待 😆</h2>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: black;'>一切消息都會公佈在小海的 <a href='https://www.instagram.com/paintinglife_0707/'>Instagram 帳號</a>敬請期待 😆</h2>", unsafe_allow_html=True)
 
-# <a href="https://www.instagram.com/paintinglife_0707/">Instagram 帳號(paintinglife_0707)</a>
-# st.write("Instagram: paintinglife_0707(https://www.instagram.com/paintinglife_0707/)")
 
 # https://github.com/soft-nougat/streamlitwebcam/tree/main/final_model
 # https://discuss.streamlit.io/t/how-do-i-use-a-background-image-on-streamlit/5067/9
