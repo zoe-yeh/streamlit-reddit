@@ -55,7 +55,7 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 # 	page_icon="random", 
 # 	layout="wide",  
 # 	initial_sidebar_state="collapsed")
-set_png_as_page_bg('anita40anniversary_DM1.jpg')
+# set_png_as_page_bg('anita40anniversary_DM1.jpg')
 # st.image("./img/anita_test.jpeg", width=300)
 
 
