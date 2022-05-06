@@ -10,10 +10,7 @@ from gsheetsdb import connect
 from PIL import Image
 
 from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
-
-# gauth = GoogleAuth()           
-# drive = GoogleDrive(gauth)  
+from pydrive.drive import GoogleDrive  
 
 # 加入進度條, 增加一個空白元件，等等要放文字
 latest_iteration = st.empty()
@@ -24,21 +21,13 @@ for i in range(100):
 	time.sleep(0.1)
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
-# # Create a connection object.
-# credentials = service_account.Credentials.from_service_account_info(
-#     st.secrets["gcp_service_account"],
-#     scopes=[
-#         "https://www.googleapis.com/auth/spreadsheets",
-#     ],
-# )
-# conn = connect(credentials=credentials)
 
 # 網頁配置設定
 st.set_page_config(
     page_title="Anita Mui 出道 40 週年應援活動",
     page_icon="random",
     layout="wide", 
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="collapsed",
 )
 
 
