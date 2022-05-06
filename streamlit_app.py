@@ -41,27 +41,27 @@ st.title('輸入你想對梅姐說的話：')
 
 
 # Streamlit widgets to let a user create a new post
-title = st.text_input("Post title")
-url = st.text_input("Post url")
-submit = st.button("Submit new post")
+title = st.text_input("你是來自哪裡的粉絲:")
+url = st.text_input("喜歡 Anita 已經有幾年了")
+submit = st.button("Submit")
 
 # Once the user has submitted, upload it to the database
 if title and url and submit:
-	doc_ref = db.collection("posts").document(title)
+	doc_ref = db.collection("anita").document(anita40anniversary)
 	doc_ref.set({
-		"title": title,
-		"url": url
+		"地點": place,
+		"喜歡 Anita 已經有幾年了 ": years
 	})
 
 # And then render each post, using some light Markdown
-posts_ref = db.collection("posts")
+posts_ref = db.collection("anita")
 for doc in posts_ref.stream():
 	post = doc.to_dict()
-	title = post["title"]
-	url = post["url"]
+	title = post["place"]
+	url = post["years"]
 
-	st.subheader(f"Post: {title}")
-	st.write(f":link: [{url}]({url})")
+	st.subheader(f"Post: {place}")
+	st.write(f":喜歡 Anita 已經有幾年了: ({years})")
 
 
 # # @st.cache(ttl=600)
