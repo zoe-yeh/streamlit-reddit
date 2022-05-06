@@ -31,7 +31,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('anita40anniversary_DM1.jpg')
+
 
 # # 加入進度條, 增加一個空白元件，等等要放文字
 # latest_iteration = st.empty()
@@ -53,8 +53,8 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 # 	page_icon="random", 
 # 	layout="wide",  
 # 	initial_sidebar_state="collapsed")
-
-st.image("./img/anita_test.jpeg", width=300)
+set_png_as_page_bg('anita40anniversary_DM1.jpg')
+# st.image("./img/anita_test.jpeg", width=300)
 
 
 
