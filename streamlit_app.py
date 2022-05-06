@@ -42,7 +42,7 @@ st.markdown("""<table style='border:1px solid black;margin-left:auto;margin-righ
         <th>Age</th>
     </tr>
     <tr>
-        <td><img src="photo_2022-05-06_21-35-32.jpg"></td>
+        <td><img src="file:///photo_2022-05-06_21-35-32.jpg"></td>
         <td><h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1></td>
         <td>16</td>
     </tr>
