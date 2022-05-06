@@ -23,6 +23,14 @@ credentials = service_account.Credentials.from_service_account_info(
 )
 conn = connect(credentials=credentials)
 
+st.set_page_config(
+    page_title="自定義網頁標題",
+    page_icon="random",
+    layout="centered",
+    initial_sidebar_state="collapsed",
+)
+
+
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 @st.cache(ttl=600)
