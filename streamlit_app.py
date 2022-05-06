@@ -48,7 +48,7 @@ st.markdown("""<table style='border:1px solid black;margin-left:auto;margin-righ
     </tr>
     <tr>
         <td>2</td>
-        <td>Clark Kent</td>
+        <td><h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2></td>
         <td>34</td>
     </tr>
 </table>""", unsafe_allow_html=True)
