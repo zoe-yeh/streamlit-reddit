@@ -14,24 +14,7 @@ import helper as help
 # help.set_bg_hack()
 
 
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-set_background('20211230mui_0.png')
 
 
 # # 加入進度條, 增加一個空白元件，等等要放文字
@@ -54,6 +37,26 @@ st.set_page_config(
 	page_icon="random", 
 	layout="wide",  
 	initial_sidebar_state="collapsed")
+
+
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_background('20211230mui_0.png')
 
 # st.image("./img/anita_test.jpeg", width=300)
 
