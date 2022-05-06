@@ -69,7 +69,7 @@ set_background('20211230mui_0.png')
 
 submit = st.button("Submit")
 
-nickname, place, years, sentence  = st.beta_columns([1,1,1,1])
+nickname, place, years, sentence  = st.columns([1,1,1,1])
 nickname.text_input("1. 暱稱:")
 place.text_input("2. 你是來自哪裡的粉絲:")
 years.text_input("3. 喜歡 Anita 已經有幾年了")
