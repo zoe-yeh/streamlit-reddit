@@ -11,7 +11,7 @@ from pydrive.drive import GoogleDrive
 
 import base64
 import helper as help
-help.set_bg_hack()
+# help.set_bg_hack()
 
 
 # 加入進度條, 增加一個空白元件，等等要放文字
@@ -34,11 +34,8 @@ st.set_page_config(
 	page_icon="random", 
 	layout="wide",  
 	initial_sidebar_state="collapsed")
-# set_png_as_page_bg('anita40anniversary_DM1.jpg')
+
 # st.image("./img/anita_test.jpeg", width=300)
-
-
-
 
 
 # Perform SQL query on the Google Sheet.
