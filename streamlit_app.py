@@ -1,7 +1,4 @@
-
 # https://docs.streamlit.io/knowledge-base/tutorials/databases/private-gsheet
-# streamlit_app.py
-
 import time
 import streamlit as st
 from google.cloud import firestore
@@ -23,10 +20,15 @@ from pydrive.drive import GoogleDrive
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
 # 網頁配置設定
-st.set_page_config(page_title="Anita Mui 出道 40 週年應援活動", page_icon="random", layout="wide",  initial_sidebar_state="collapsed")
+st.set_page_config(
+	page_title="Anita Mui 出道 40 週年應援活動", 
+	page_icon="random", 
+	layout="wide",  
+	initial_sidebar_state="collapsed")
 
 # st.image("./img/anita_test.jpeg", width=300)
-st.markdown('<style>h1{color: blue;}</style>', unsafe_allow_html=True)
+
+st.markdown('<img src="./img/anita_test.jpeg" style="background-image:url(./img/anita_test.jpeg);background-size：contain;" />', unsafe_allow_html=True)
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 st.title('輸入你想對梅姐說的話：')
