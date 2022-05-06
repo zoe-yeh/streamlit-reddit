@@ -20,7 +20,7 @@ from pydrive.drive import GoogleDrive
 # 	bar.progress(i + 1)
 # 	time.sleep(0.1)
 
-st.image(anita_test.jpeg, width=300)
+st.image("./anita_test.jpeg", width=300)
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
