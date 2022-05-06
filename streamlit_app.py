@@ -9,6 +9,16 @@ from PIL import Image
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive  
 
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # # 加入進度條, 增加一個空白元件，等等要放文字
 # latest_iteration = st.empty()
 # bar = st.progress(0)
@@ -19,15 +29,7 @@ from pydrive.drive import GoogleDrive
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 # 網頁配置設定
 st.set_page_config(
