@@ -9,7 +9,7 @@ import streamlit as st
 import base64 # used in set_bg_hack to encode bg image
 from datetime import date # used in write_image for file name
 import time # used in write_image for file name
-import cv2 # used in write_image for writing images
+# import cv2 # used in write_image for writing images
 
 def set_bg_hack():
     '''
