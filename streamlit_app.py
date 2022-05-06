@@ -31,7 +31,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg(' anita40anniversary_DM1.jpg')
+set_png_as_page_bg('anita40anniversary_DM1.jpg')
 
 # # 加入進度條, 增加一個空白元件，等等要放文字
 # latest_iteration = st.empty()
