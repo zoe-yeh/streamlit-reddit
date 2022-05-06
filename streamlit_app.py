@@ -27,8 +27,8 @@ st.set_page_config(
 	initial_sidebar_state="collapsed")
 
 # st.image("./img/anita_test.jpeg", width=300)
-# <img src="./img/./img/anita40anniversary_DM1.jpg" style="background-image:url(./img/anita40anniversary_DM1.jpg);background-size：contain;" />
-st.markdown('<img src="./img/./img/anita40anniversary_DM1.jpg" style="background-image:url(./img/anita40anniversary_DM1.jpg);background-size：contain;" />', unsafe_allow_html=True)
+
+st.markdown('<style>div {width: 600px;height: 600px;background-image: url(http:www.google.com);background-repeat: no-repeat;}</style>', unsafe_allow_html=True)
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 st.title('輸入你想對梅姐說的話：')
