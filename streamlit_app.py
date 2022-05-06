@@ -27,7 +27,6 @@ st.set_page_config(
     page_title="Anita Mui 出道 40 週年應援活動",
     page_icon="random",
     layout="wide", 
-    initial_sidebar_state="collapsed",
 )
 
 
