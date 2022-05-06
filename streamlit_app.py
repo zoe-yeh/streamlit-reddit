@@ -23,6 +23,7 @@ credentials = service_account.Credentials.from_service_account_info(
 )
 conn = connect(credentials=credentials)
 
+# 網頁配置設定
 st.set_page_config(
     page_title="Anita Mui 出道 40 週年應援活動",
     page_icon="random",
@@ -33,6 +34,8 @@ st.set_page_config(
 
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
+st.title('輸入你想對梅姐說的話：')
+
 @st.cache(ttl=600)
 def run_query(query):
     rows = conn.execute(query, headers=1)
