@@ -54,14 +54,14 @@ if title and url and submit:
 	})
 
 # And then render each post, using some light Markdown
-posts_ref = db.collection("anita")
-for doc in posts_ref.stream():
-	post = doc.to_dict()
-	title = post["place"]
-	url = post["years"]
+anita_ref = db.collection("anita")
+for doc in anita_ref.stream():
+	fans_profile = doc.to_dict()
+	place = fans_profile["place"]
+	years = fans_profile["years"]
 
 	st.subheader(f"Post: {place}")
-	st.write(f":喜歡 Anita 已經有幾年了: ({years})")
+	st.write(f"喜歡 Anita 已經有幾年了: {years}")
 
 
 # # @st.cache(ttl=600)
