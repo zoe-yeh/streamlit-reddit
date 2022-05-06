@@ -1,25 +1,21 @@
+
+# https://docs.streamlit.io/knowledge-base/tutorials/databases/private-gsheet
+# streamlit_app.py
+
 import streamlit as st
+from google.cloud import firestore
+from google.oauth2 import service_account
+from gsheetsdb import connect
+from PIL import Image
 
-st.header('Hello 🌎!')
-if st.button('Balloons?'):
-    st.balloons()
-# # https://docs.streamlit.io/knowledge-base/tutorials/databases/private-gsheet
-# # streamlit_app.py
-
-# import streamlit as st
-# from google.cloud import firestore
-# from google.oauth2 import service_account
-# from gsheetsdb import connect
-# from PIL import Image
-
-# from pydrive.auth import GoogleAuth
-# from pydrive.drive import GoogleDrive
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 
 # gauth = GoogleAuth()           
 # drive = GoogleDrive(gauth)  
 
 
-# db = firestore.Client.from_service_account_json("firestore-key.json")
+db = firestore.Client.from_service_account_json("firestore-key.json")
 # # # Create a connection object.
 # # credentials = service_account.Credentials.from_service_account_info(
 # #     st.secrets["gcp_service_account"],
