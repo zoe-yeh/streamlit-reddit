@@ -108,7 +108,8 @@ if image_file is not None:
 st.video("https://www.youtube.com/watch?v=EoTMlRISRuQ", start_time=0)
 
 
-st.markdown("<h2 style='text-align: center; color: black;'>謝謝今天的拜訪，你填寫的小卡之後會製作成驚喜，敬請期待 😆</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>謝謝今天的拜訪，你填寫的小卡之後會製作成驚喜唷！</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>一切消息都會公佈在小海的 IG 帳號敬請期待 😆</h2>", unsafe_allow_html=True)
 # https://github.com/soft-nougat/streamlitwebcam/tree/main/final_model
 # https://discuss.streamlit.io/t/how-do-i-use-a-background-image-on-streamlit/5067/9
 # https://vocus.cc/article/60ea6520fd89780001771fcd
