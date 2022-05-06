@@ -20,8 +20,8 @@ def set_bg_hack():
     The background.
     '''
     # set bg name
-    main_bg = "anita40anniversary_DM1.jpg"
-    main_bg_ext = "jpg"
+    main_bg = "20211230mui_0.png"
+    main_bg_ext = "png"
         
     st.markdown(
          f"""
