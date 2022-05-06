@@ -41,12 +41,12 @@ st.title('輸入你想對梅姐說的話：')
 
 
 # Streamlit widgets to let a user create a new post
-title = st.text_input("你是來自哪裡的粉絲:")
-url = st.text_input("喜歡 Anita 已經有幾年了")
+place = st.text_input("你是來自哪裡的粉絲:")
+years = st.text_input("喜歡 Anita 已經有幾年了")
 submit = st.button("Submit")
 
 # Once the user has submitted, upload it to the database
-if title and url and submit:
+if place and years and submit:
 	doc_ref = db.collection("anita").document(anita40anniversary)
 	doc_ref.set({
 		"地點": place,
