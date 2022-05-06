@@ -21,7 +21,7 @@ def set_bg_hack():
     '''
     # set bg name
     main_bg = "anita40anniversary_DM1.jpg"
-    main_bg_ext = "png"
+    main_bg_ext = "jpg"
         
     st.markdown(
          f"""
