@@ -23,11 +23,7 @@ for i in range(100):
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
 # 網頁配置設定
-st.set_page_config(
-    page_title="Anita Mui 出道 40 週年應援活動",
-    page_icon="random",
-    layout="wide", 
-)
+st.set_page_config(page_title="Anita Mui 出道 40 週年應援活動", page_icon="random", layout="wide",  initial_sidebar_state="collapsed")
 
 
 # Perform SQL query on the Google Sheet.
