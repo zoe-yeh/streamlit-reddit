@@ -20,13 +20,12 @@ from pydrive.drive import GoogleDrive
 # 	bar.progress(i + 1)
 # 	time.sleep(0.1)
 
-st.image("./anita_test.jpeg", width=300)
-
 db = firestore.Client.from_service_account_json("firestore-key.json")
 
 # 網頁配置設定
 st.set_page_config(page_title="Anita Mui 出道 40 週年應援活動", page_icon="random", layout="wide",  initial_sidebar_state="collapsed")
 
+st.image("./anita_test.jpeg", width=300)
 
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
