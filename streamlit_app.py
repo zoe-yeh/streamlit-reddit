@@ -60,7 +60,7 @@ for doc in anita_ref.stream():
 	# place = fans_profile["place"]
 	# years = fans_profile["years"]
     
-	st.subheader(f"Post: {doc}")
+	st.subheader(f"Post: {fans_profile}")
 
 	# st.subheader(f"Post: {place}")
 	# st.write(f"喜歡 Anita 已經有幾年了: {years}")
