@@ -58,7 +58,7 @@ anita_ref = db.collection("anita")
 for doc in anita_ref.stream():
 	fans_profile = doc.to_dict()
 	place = fans_profile["place"]
-	years = fans_profile["years"]
+	years = fans_profile["year"]
     
 	# st.subheader(f"Post: {fans_profile}")
 
