@@ -15,8 +15,7 @@ from pydrive.drive import GoogleDrive
 # gauth = GoogleAuth()           
 # drive = GoogleDrive(gauth)  
 
-# 加入進度條
-# 增加一個空白元件，等等要放文字
+# 加入進度條, 增加一個空白元件，等等要放文字
 latest_iteration = st.empty()
 bar = st.progress(0)
 for i in range(100):
@@ -39,7 +38,7 @@ st.set_page_config(
     page_title="Anita Mui 出道 40 週年應援活動",
     page_icon="random",
     layout="wide", 
-    initial_sidebar_state="collapsed", 
+    initial_sidebar_state="collapsed"
 )
 
 
