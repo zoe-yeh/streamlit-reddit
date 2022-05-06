@@ -47,7 +47,7 @@ submit = st.button("Submit")
 
 # Once the user has submitted, upload it to the database
 if place and years and submit:
-	doc_ref = db.collection("anita").document(anita40anniversary)
+	doc_ref = db.collection("anita").document("anita40anniversary")
 	doc_ref.set({
 		"地點": place,
 		"喜歡 Anita 已經有幾年了 ": years
