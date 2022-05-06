@@ -57,11 +57,13 @@ if place and years and submit:
 anita_ref = db.collection("anita")
 for doc in anita_ref.stream():
 	fans_profile = doc.to_dict()
-	place = fans_profile["place"]
-	years = fans_profile["years"]
+	# place = fans_profile["place"]
+	# years = fans_profile["years"]
+    
+	st.subheader(f"Post: {doc}")
 
-	st.subheader(f"Post: {place}")
-	st.write(f"喜歡 Anita 已經有幾年了: {years}")
+	# st.subheader(f"Post: {place}")
+	# st.write(f"喜歡 Anita 已經有幾年了: {years}")
 
 
 # # @st.cache(ttl=600)
