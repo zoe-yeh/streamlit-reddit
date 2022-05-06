@@ -18,7 +18,7 @@ from pydrive.drive import GoogleDrive
 # 	time.sleep(0.1)
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
-st.markdown('<style>div {width: 1200px;height: 1200px;background-image: url(img/anita_test.jpeg);background-repeat: no-repeat;}</style>', unsafe_allow_html=True)
+st.markdown('<style>div {background-image: url(img/anita_test.jpeg);background-repeat: no-repeat;}</style>', unsafe_allow_html=False)
 # 網頁配置設定
 st.set_page_config(
 	page_title="Anita Mui 出道 40 週年應援活動", 
