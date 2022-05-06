@@ -32,8 +32,8 @@ for i in range(100):
 	time.sleep(0.1)
 
 
-st.markdown("<h1 style='text-align: center; color: red;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: red;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
 # 
 
 # 背景圖
