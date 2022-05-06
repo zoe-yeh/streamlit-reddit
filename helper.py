@@ -27,13 +27,14 @@ def set_bg_hack():
          f"""
          <style>
          .reportview-container {{
-             background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+             background-image: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
          }}
          </style>
          """,
          unsafe_allow_html=True
      )
-        
+# background-image
+
 # def header(text):
 #     '''
 #      A function to neatly display headers in app.
