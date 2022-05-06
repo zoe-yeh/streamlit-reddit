@@ -29,11 +29,11 @@ db = firestore.Client.from_service_account_json("firestore-key.json")
 # 網頁配置設定
 # st.set_page_config(page_title="Anita")
 
-# st.set_page_config(
-# 	page_title="Anita Mui 出道 40 週年應援活動", 
-# 	page_icon="random", 
-# 	layout="wide",  
-# 	initial_sidebar_state="collapsed")
+st.set_page_config(
+	page_title="Anita Mui 出道 40 週年應援活動", 
+	page_icon="random", 
+	layout="wide",  
+	initial_sidebar_state="collapsed")
 # set_png_as_page_bg('anita40anniversary_DM1.jpg')
 # st.image("./img/anita_test.jpeg", width=300)
 
