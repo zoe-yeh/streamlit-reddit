@@ -63,8 +63,6 @@ set_background('20211230mui_0.png')
 
 # Streamlit widgets to let a user create a new post
 today = st.date_input("今天日期") 
-# st.write(today)
-
 nickname = st.text_input("暱稱:")
 place = st.text_input("你是來自哪裡的粉絲:")
 years = st.text_input("喜歡 Anita 已經有幾年了")
@@ -82,9 +80,10 @@ sentence = st.text_area("你想對 Anita 說", height=100)
 submit = st.button("Submit")
 
 # Once the user has submitted, upload it to the database
-if place and years and nickname and submit:
+if today and nickname and place and years and sentence and submit:
 	doc_ref = db.collection("anita").document("anita40anniversary")
 	doc_ref.set({
+		"date_time": today,
 		"nickname": nickname,
 		"place": place,
 		"year": years,
@@ -95,6 +94,7 @@ if place and years and nickname and submit:
 anita_ref = db.collection("anita")
 for doc in anita_ref.stream():
 	fans_profile = doc.to_dict()
+	date_time = fans_profile["date_time"]
 	nickname = fans_profile["nickname"]
 	place = fans_profile["place"]
 	years = fans_profile["year"]
