@@ -24,10 +24,10 @@ credentials = service_account.Credentials.from_service_account_info(
 conn = connect(credentials=credentials)
 
 st.set_page_config(
-    page_title="自定義網頁標題",
+    page_title="Anita Mui 出道 40 週年應援活動",
     page_icon="random",
-    layout="centered",
-    initial_sidebar_state="collapsed",
+    layout="wide",
+    initial_sidebar_state="collapsed", # 側邊欄顯示狀態，"expanded"打開或"collapsed"隱藏，預設是"auto"，代表在手機尺寸的設備上是隱藏，否則是打開顯示。
 )
 
 
