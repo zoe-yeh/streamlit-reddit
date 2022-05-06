@@ -62,19 +62,19 @@ set_background('20211230mui_0.png')
 
 
 # Streamlit widgets to let a user create a new post
-# nickname = st.text_input("1. 暱稱:")
-# place = st.text_input("2. 你是來自哪裡的粉絲:")
-# years = st.text_input("3. 喜歡 Anita 已經有幾年了")
-# sentence = st.text_input("4. 你想對 Anita 說")
+nickname = st.text_input("暱稱:")
+place = st.text_input("你是來自哪裡的粉絲:")
+years = st.text_input("喜歡 Anita 已經有幾年了")
+sentence = st.text_area("你想對 Anita 說", height=100)
 
 
 
-nickname, place  = st.columns([1,1])
-years, sentence  = st.columns([1,1])
-nickname.text_input("暱稱:")
-place.text_input("你是來自哪裡的粉絲:")
-years.text_input("喜歡 Anita 已經有幾年了")
-sentence.text_area("你想對 Anita 說", height=100)
+# nickname, place  = st.columns([1,1])
+# years, sentence  = st.columns([1,1])
+# nickname.text_input("暱稱:")
+# place.text_input("你是來自哪裡的粉絲:")
+# years.text_input("喜歡 Anita 已經有幾年了")
+# sentence.text_area("你想對 Anita 說", height=100)
 
 submit = st.button("Submit")
 
