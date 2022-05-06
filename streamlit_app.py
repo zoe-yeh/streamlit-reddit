@@ -74,7 +74,7 @@ years, sentence  = st.columns([1,1])
 nickname.text_input("暱稱:")
 place.text_input("你是來自哪裡的粉絲:")
 years.text_input("喜歡 Anita 已經有幾年了")
-sentence.text_input("你想對 Anita 說")
+sentence.text_area("你想對 Anita 說", height=100)
 
 submit = st.button("Submit")
 
