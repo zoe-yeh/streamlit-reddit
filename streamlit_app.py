@@ -18,7 +18,7 @@ from pydrive.drive import GoogleDrive
 # 	time.sleep(0.1)
 
 db = firestore.Client.from_service_account_json("firestore-key.json")
-
+st.markdown('<style>div {width: 1200px;height: 1200px;background-image: url(img/anita_test.jpeg);background-repeat: no-repeat;}</style>', unsafe_allow_html=True)
 # 網頁配置設定
 st.set_page_config(
 	page_title="Anita Mui 出道 40 週年應援活動", 
@@ -28,7 +28,7 @@ st.set_page_config(
 
 # st.image("./img/anita_test.jpeg", width=300)
 
-st.markdown('<style>div {width: 1200px;height: 1200px;background-image: url(img/anita_test.jpeg);background-repeat: no-repeat;}</style>', unsafe_allow_html=True)
+
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 st.title('輸入你想對梅姐說的話：')
