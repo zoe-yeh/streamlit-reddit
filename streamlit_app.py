@@ -49,21 +49,21 @@ submit = st.button("Submit")
 if place and years and submit:
 	doc_ref = db.collection("anita").document("anita40anniversary")
 	doc_ref.set({
-		"地點": place,
-		"喜歡 Anita 已經有幾年了": years
+		"place": place,
+		"years": years
 	})
 
 # And then render each post, using some light Markdown
 anita_ref = db.collection("anita")
 for doc in anita_ref.stream():
 	fans_profile = doc.to_dict()
-	place = fans_profile["地點"]
-	years = fans_profile["喜歡 Anita 已經有幾年了"]
+	place = fans_profile["place"]
+	years = fans_profile["years"]
     
 	# st.subheader(f"Post: {fans_profile}")
 
-	# st.subheader(f"Post: {place}")
-	# st.write(f"喜歡 Anita 已經有幾年了: {years}")
+	st.subheader(f"Post: {place}")
+	st.write(f"喜歡 Anita 已經有幾年了: {years}")
 
 
 # # @st.cache(ttl=600)
