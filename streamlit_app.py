@@ -69,11 +69,12 @@ set_background('20211230mui_0.png')
 
 
 
-nickname, place, years, sentence  = st.columns([1,1,1,1])
-nickname.text_input("1. 暱稱:")
-place.text_input("2. 你是來自哪裡的粉絲:")
-years.text_input("3. 喜歡 Anita 已經有幾年了")
-sentence.text_input("4. 你想對 Anita 說")
+nickname, place  = st.columns([1,1])
+years, sentence  = st.columns([1,1])
+nickname.text_input("暱稱:")
+place.text_input("你是來自哪裡的粉絲:")
+years.text_input("喜歡 Anita 已經有幾年了")
+sentence.text_input("你想對 Anita 說")
 
 submit = st.button("Submit")
 
