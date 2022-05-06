@@ -65,35 +65,38 @@ for doc in anita_ref.stream():
 	st.subheader(f"Post: {place}")
 	st.subheader(f"喜歡 Anita 已經有幾年了: {years}")
 
+def load_image(image_file):
+	img = Image.open(image_file)
+	return img
 
-# # @st.cache(ttl=600)
-# # def run_query(query):
-# #     rows = conn.execute(query, headers=1)
-# #     rows = rows.fetchall()
-# #     return rows
+# image_file = st.file_uploader("Upload Files", type=['png','jpeg'], accept_multiple_files = True)
+image_file = st.file_uploader("Upload Files", type=['png','jpeg'])
 
-# # sheet_url = st.secrets["private_gsheets_url"]
-# # rows = run_query(f'SELECT * FROM "{sheet_url}"')
+if image_file is not None:
+	# To View Uploaded Image
+	st.image(load_image(image_file), width=300)
 
-# # # Print results.
-# # for row in rows:
-# # 	st.text(row)
-# # 	st.write(f"拜訪時間: {row.時間戳記}\n  我想說: {row.留下一句話你最想跟_Anita_說的話吧_}")
+
+
+# @st.cache(ttl=600)
+# def run_query(query):
+#     rows = conn.execute(query, headers=1)
+#     rows = rows.fetchall()
+#     return rows
+
+# sheet_url = st.secrets["private_gsheets_url"]
+# rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+# # Print results.
+# for row in rows:
+# 	st.text(row)
+# 	st.write(f"拜訪時間: {row.時間戳記}\n  我想說: {row.留下一句話你最想跟_Anita_說的話吧_}")
 
 # 	# st.image("https://drive.google.com/open?id=14456bhRmjPaxYPWmKw4DfjLCQ4MAQZDz") # Manually Adjust the width of the image as per requirement
 #     # st.write(f"{row._3}")
 # 	# st.write(f"{row.留下一句話你最想跟_Anita_說的話吧_}")
 
-# def load_image(image_file):
-# 	img = Image.open(image_file)
-# 	return img
 
-# # image_file = st.file_uploader("Upload Files", type=['png','jpeg'], accept_multiple_files = True)
-# image_file = st.file_uploader("Upload Files", type=['png','jpeg'])
-
-# if image_file is not None:
-# 	# To View Uploaded Image
-# 	st.image(load_image(image_file), width=300)
 
 # 	#Saving upload
 # 	with open(image_file.name,"wb") as f:
