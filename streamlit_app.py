@@ -35,7 +35,7 @@ st.set_page_config(
 st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
 # st.write("Instagram: paintinglife_0707(https://www.instagram.com/paintinglife_0707/)")
-st.markdown("""<table>
+st.markdown("""<table style='border:1px solid black;margin-left:auto;margin-right:auto;'>
     <tr>
         <th>No.</th>
         <th>Name</th>
