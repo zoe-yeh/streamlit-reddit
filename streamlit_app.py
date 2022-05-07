@@ -50,7 +50,7 @@ st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, �
 col1, col2 = st.columns(2)
 img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
 (w, h) = img.size
-st.text(int(w), int(h))
+st.head(int(w), int(h))
 new_w = int(w*0.4)
 new_h = int(h*0.4)
 
