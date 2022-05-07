@@ -52,7 +52,9 @@ from PIL import Image
 
 img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
 (w, h) = img.size
-new_img = img.resize((w*0.6, h*0.6))
+new_w = int(w*0.6)
+new_h = int(h*0.6)
+new_img = img.resize((new_w, new_h))
 
 
 with col1:
