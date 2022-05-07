@@ -153,3 +153,5 @@ st.markdown("<h2 style='text-align: center; color: black;'>一切消息都會公
 # https://github.com/soft-nougat/streamlitwebcam/tree/main/final_model
 # https://discuss.streamlit.io/t/how-do-i-use-a-background-image-on-streamlit/5067/9
 # https://vocus.cc/article/60ea6520fd89780001771fcd
+
+# 背景、自動播歌、寫資料進 firestore、 寫照片進 firestore
