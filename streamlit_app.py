@@ -52,7 +52,7 @@ from PIL import Image
 
 img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
 (w, h) = img.size
-st.text(new_w, new_h)
+st.text(w, h)
 new_w = int(w*0.4)
 new_h = int(h*0.4)
 
