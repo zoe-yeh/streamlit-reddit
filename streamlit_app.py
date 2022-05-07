@@ -40,13 +40,23 @@ st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, �
 # also note that different media types such as an audio or video file you 
 # will need to have that whole column as an audio or video column!
 
-for i in range(1,3): # number of rows in your table! = 2
-    cols = st.columns(3) # number of columns in each row! = 2
-    # first column of the ith row
-    cols[0].image('./img/anita40anniversary_DM1.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
-	cols[1].text('梅艷芳出道四十週年紀念晝展')
-    cols[2].image('./img/anita40anniversary_DM2.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
+# for i in range(1,3): # number of rows in your table! = 2
+#     cols = st.columns(3) # number of columns in each row! = 2
+#     # first column of the ith row
+#     cols[0].image('./img/anita40anniversary_DM1.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
+# 	  cols[1].text('梅艷芳出道四十週年紀念晝展')
+#     cols[2].image('./img/anita40anniversary_DM2.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
 
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.image('./img/anita40anniversary_DM1.jpg')
+
+with col2:
+    st.text('./img/anita40anniversary_DM1.jpg')
+
+with col3:
+    st.image('./img/anita40anniversary_DM1.jpg')
 
 
 # 背景圖
