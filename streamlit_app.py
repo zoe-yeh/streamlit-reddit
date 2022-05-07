@@ -43,7 +43,7 @@ st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, �
 for i in range(1,2): # number of rows in your table! = 2
     cols = st.columns(2) # number of columns in each row! = 2
     # first column of the ith row
-    cols[0].image('./img/anita40anniversary_DM1.jpg', use_column_width=True)
+    cols[0].image('./img/anita40anniversary_DM1.jpg', width=100, use_column_width=True)
     cols[1].image('./img/anita40anniversary_DM2.jpg', use_column_width=True)
 
 
