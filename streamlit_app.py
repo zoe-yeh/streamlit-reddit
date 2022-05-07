@@ -65,8 +65,8 @@ st.title('Table of media')
 for i in range(1,3): # number of rows in your table! = 2
     cols = st.columns(2) # number of columns in each row! = 2
     # first column of the ith row
-    cols[0].image('anita40anniversary_DM1.jpg' %i, use_column_width=True)
-    cols[1].image('anita40anniversary_DM2.jpg' %i, use_column_width=True)
+    cols[0].image('./img/anita40anniversary_DM1.jpg', use_column_width=True)
+    cols[1].image('./img/anita40anniversary_DM2.jpg', use_column_width=True)
 
 
 
