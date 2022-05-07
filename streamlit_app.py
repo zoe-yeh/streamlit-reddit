@@ -47,20 +47,20 @@ st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, �
 # 	  cols[1].text('梅艷芳出道四十週年紀念晝展')
 #     cols[2].image('./img/anita40anniversary_DM2.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
 
-col1, col2 = st.columns(2)
-img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
-(w, h) = img.size
-new_w = int(w*0.4)
-new_h = int(h*0.4)
+# col1, col2 = st.columns(2)
+# img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
+# (w, h) = img.size
+# new_w = int(w*0.4)
+# new_h = int(h*0.4)
 
-new_img = img.resize((new_w, new_h))
+# new_img = img.resize((new_w, new_h))
 
-with col1:
-    st.image(new_img)
+# with col1:
+#     st.image(new_img)
 
-with col2:
-    st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
-	# st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
+# with col2:
+#     st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
+# 	# st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
 
 
 # 背景圖
