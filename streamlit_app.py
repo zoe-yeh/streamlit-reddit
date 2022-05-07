@@ -51,8 +51,8 @@ col1, col2, col3 = st.columns(3)
 from PIL import Image
 
 img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
-
-new_img = img.resize((256, 256))
+(w, h) = img.size
+new_img = img.resize((w*0.6, h*0.6))
 
 
 with col1:
