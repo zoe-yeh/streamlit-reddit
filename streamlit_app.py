@@ -34,35 +34,13 @@ st.set_page_config(
 
 st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2>", unsafe_allow_html=True)
-# st.write("Instagram: paintinglife_0707(https://www.instagram.com/paintinglife_0707/)")
-st.markdown("""<table style='border:1px solid black;margin-left:auto;margin-right:auto;'>
-    <tr>
-        <th>No.</th>
-        <th>Name</th>
-        <th>Age</th>
-    </tr>
-    <tr>
-        <td><img src="file:///photo_2022-05-06_21-35-32.jpg"></td>
-        <td><h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1></td>
-        <td>16</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td><h2 style='text-align: center; color: black;'>未變情懷40載, 流年似水如一夢</h2></td>
-        <td>34</td>
-    </tr>
-</table>""", unsafe_allow_html=True)
-
-import streamlit as st
-
-st.title('Table of media')
 
 # to get different images/media in the rows and columns, have a systematic 
 # way to label your images/media. For mine, I have used row_{i}_col_0/1
 # also note that different media types such as an audio or video file you 
 # will need to have that whole column as an audio or video column!
 
-for i in range(1,3): # number of rows in your table! = 2
+for i in range(1,2): # number of rows in your table! = 2
     cols = st.columns(2) # number of columns in each row! = 2
     # first column of the ith row
     cols[0].image('./img/anita40anniversary_DM1.jpg', use_column_width=True)
