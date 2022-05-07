@@ -53,6 +53,22 @@ st.markdown("""<table style='border:1px solid black;margin-left:auto;margin-righ
     </tr>
 </table>""", unsafe_allow_html=True)
 
+import streamlit as st
+
+st.title('Table of media')
+
+# to get different images/media in the rows and columns, have a systematic 
+# way to label your images/media. For mine, I have used row_{i}_col_0/1
+# also note that different media types such as an audio or video file you 
+# will need to have that whole column as an audio or video column!
+
+for i in range(1,3): # number of rows in your table! = 2
+    cols = st.columns(2) # number of columns in each row! = 2
+    # first column of the ith row
+    cols[0].image('anita40anniversary_DM1.jpg' %i, use_column_width=True)
+    cols[1].image('anita40anniversary_DM2.jpg' %i, use_column_width=True)
+
+
 
 # 背景圖
 def get_base64(bin_file):
