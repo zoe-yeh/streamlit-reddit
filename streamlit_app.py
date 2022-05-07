@@ -48,9 +48,15 @@ st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, �
 #     cols[2].image('./img/anita40anniversary_DM2.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
 
 col1, col2, col3 = st.columns(3)
+from PIL import Image
+
+img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
+
+new_img = img.resize((256, 256))
+
 
 with col1:
-    st.image('./img/photo_2022-05-06_21-35-30.jpg')
+    st.image(new_img)
 
 with col2:
     st.markdown("<h1 style='text-align: center; color: black;'>梅艷芳出道四十週年紀念晝展</h1>", unsafe_allow_html=True)
