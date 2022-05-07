@@ -48,11 +48,9 @@ st.markdown("<h2 style='text-align: center; color: black;'>未變情懷40載, �
 #     cols[2].image('./img/anita40anniversary_DM2.jpg', use_column_width=True, output_format="auto", caption='創作者 小海')
 
 col1, col2 = st.columns(2)
-from PIL import Image
-
 img = Image.open("./img/photo_2022-05-06_21-35-30.jpg")
 (w, h) = img.size
-st.text(w, h)
+st.text(int(w), int(h))
 new_w = int(w*0.4)
 new_h = int(h*0.4)
 
