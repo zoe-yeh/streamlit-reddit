@@ -3,7 +3,7 @@ import toml
 output_file = ".streamlit/secrets.toml"
 # output_file = "secrets.toml"
 
-with open("streamlit-reddit-ebe13-firebase-adminsdk-h9zlm-e391adb04f.json") as json_file:
+with open("firestore-key.json") as json_file:
     json_text = json_file.read()
 
 config = {"textkey": json_text}
