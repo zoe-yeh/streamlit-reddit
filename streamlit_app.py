@@ -13,7 +13,12 @@ import base64
 import helper as help
 # help.set_bg_hack()
 
-db = firestore.Client.from_service_account_json("streamlit-reddit-ebe13-firebase-adminsdk-h9zlm-e391adb04f.json")
+# db = firestore.Client.from_service_account_json("streamlit-reddit-ebe13-firebase-adminsdk-h9zlm-e391adb04f.json")
+import json
+key_dict = json.loads(st.secrets["textkey"])
+creds = service_account.Credentials.from_service_account_info(key_dict)
+db = firestore.Client(credentials=creds, project="streamlit-reddit")
+
 
 # 網頁配置設定
 st.set_page_config(
