@@ -15,5 +15,4 @@ if title and url and submit:
 		"title": title,
 		"url": url
 	})
-
-st.subheader(f"我們收到囉")
+	st.subheader(f"我們收到囉")
