@@ -4,7 +4,7 @@ from google.cloud import firestore
 # db = firestore.Client.from_service_account_json("firestore-key.json")
 import json
 key_dict = json.loads(st.secrets["textkey"])
-st.subheader(f"key_dict")
+st.subheader(key_dict)
 # creds = service_account.Credentials.from_service_account_info(key_dict)
 # db = firestore.Client(credentials=creds, project="streamlit-reddit")
 
